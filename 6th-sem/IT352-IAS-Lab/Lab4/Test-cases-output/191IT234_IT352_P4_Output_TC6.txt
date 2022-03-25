@@ -1,0 +1,10 @@
+ENCRYPTION OPERATION
+Plaintext: wireless sensor network area
+Ciphertext: nezvppwk kwrfgf erxpkfb krve
+Key: rwirelesssensornetworkare
+
+
+DECRYPTION OPERATION
+Ciphertext: nezvppwk kwrfgf erxpkfb krve
+Plaintext: wireless sensor network area
+Key: rwirelesssensornetworkare

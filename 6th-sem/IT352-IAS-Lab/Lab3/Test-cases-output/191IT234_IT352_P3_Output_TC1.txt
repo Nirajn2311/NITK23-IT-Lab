@@ -1,0 +1,72 @@
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.169.0.2:simctlp > 192.168.0.1:ldap S
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:simctlp SA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:simctlp > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:simctlp > 192.168.0.1:ldap PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:simctlp PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:simctlp > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:simctlp > 192.168.0.1:ldap FA
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:simctlp A / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:ecnp > 192.168.0.1:ldap S
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:ecnp SA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:ecnp > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:43690 > 192.168.170.170:43690 SPUC / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:simctlp FA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / 192.168.0.34 > 192.168.0.1 tcp frag:128 / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:ecnp FA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:ecnp > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:ecnp > 192.168.0.1:ldap FA
+Analyzed Packet is Intrusion Packet
+Ether / 170.170.170.170 > 170.170.170.170 170 / Raw / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:activememory > 192.168.0.1:ldap S
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:activememory FPAU / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:activememory > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+aa:aa:aa:aa:aa:aa > 00:e0:29:68:8b:fb (DEBNI) / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:activememory FA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:activememory > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+Ether / 192.168.0.2 > 192.168.0.1 tcp frag:8 / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:activememory A / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:dialpad_voice1 > 192.168.0.1:ldap S
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:dialpad_voice1 SA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:dialpad_voice1 > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:flashmsg > 192.168.0.1:ldap PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:dialpad_voice1 FA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:dialpad_voice1 > 192.168.0.1:ldap A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:dialpad_voice1 > 192.168.0.1:ldap FA
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.1:ldap > 192.168.0.2:dialpad_voice1 A / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.0.2:dialpad_voice2 > 192.168.0.1:ldap S
+total number of packets checked is = 35
+total number of intrusion packets detected is = 1

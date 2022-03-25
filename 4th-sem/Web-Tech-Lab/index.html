@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <title>THE DALEK FOUNDATION</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="nav-title">
+            <a href="index.html" style="padding-left: 25px;">THE DALEK FOUNDATION</a>
+        </div>
+        <div id="nav-links" class="closed">
+            <a href="login.html" target="_blank">LOG IN</a>
+            <a href="signup.html" target="_blank">SIGN UP</a>
+            <a style="color: white;" id="menu-icon" href="javascript:void(0)" onclick="openMenu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    <div class="clear" style="height: 50px;"></div>
+    <main style="text-align: center;">
+        <div id="landing-video">
+            <video src="dd-vid.mkv" autoplay muted loop width="100%" height="100%" style="display: block;"></video>
+        </div>
+        <div id="desc" class="pad">
+            <p>WE PROVIDE SECURITY</p>
+            <p>YOUR LIVES ARE IMPORTANT TO US</p>
+            <p>MOST IMPORTANTLY WE EXTERMINATE OUR THREATS</p>
+        </div>
+        <div id="features">
+            <div id="dd-img">
+                <figure>
+                    <img src="dd-pic.jpg" alt="Picture of Defense Drone" width="100%" style="display: block;">
+                    <figcaption><em>DEFENSE DRONE</em></figcaption>
+                </figure>
+            </div>
+            <div id="feat-text">
+                <p style="margin: unset;">FEATURES</p>
+                <p style="margin-top: 40px;">Made of Dalekanium</p>
+                <p>Gunstick that shoots water</p>
+                <p>Gas emitter</p>
+                <p>Controlled by our technicians</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div id="audio-demo" class="pad">
+            <p>HEAR THEM EXTERMINATE</p>
+            <audio src="dd-aud.mp3" controls loop></audio>
+        </div>
+        <div id="contact" class="pad">
+            <h2 style="font-size: 25px; font-weight: bold;">Contact Us</h2>
+            <div id="contact-form">
+                <form action="" method="">
+                    <fieldset>
+                        <legend style="padding: 0 10px;">Title</legend>
+                        <input type="radio" id="mr" name="title" value="mr">
+                        <label for="mr">Mr.</label>
+                        <br>
+                        <input type="radio" id="mrs" name="title" value="mrs">
+                        <label for="mrs">Mrs.</label>
+                        <br>
+                        <input type="radio" id="other" name="title" value="other">
+                        <label for="other">Other</label>
+                    </fieldset>
+                    <br>
+                    <label for="name" class="text-label">Name</label>
+                    <input class="text-input" type="text" id="name" name="name" placeholder="Enter Name">
+                    <br>
+                    <label for="email" class="text-label">Email</label>
+                    <input class="text-input" type="email" id="email" name="email" placeholder="example@example.com">
+                    <br>
+                    <label for="reason" class="text-label">Reason</label>
+                    <select id="reason" name="reason" class="text-input">
+                        <option value="">Choose an option</option>
+                        <option value="demo">Demo Request</option>
+                        <option value="quote">Get a quote</option>
+                        <option value="egg">EXTERMINATE!!</option>
+                    </select>
+                    <br>
+                    <fieldset id="time">
+                        <legend style="padding: 0 10px;">Contact Time</legend>
+                        <input type="checkbox" name="time" id="morning" value="morning">
+                        <label for="morning">Morning (9AM - Noon)</label>
+                        <br>
+                        <input type="checkbox" name="time" id="afternoon" value="afternoon">
+                        <label for="afternoon">Afternoon (Noon - 4PM)</label>
+                        <br>
+                        <input type="checkbox" name="time" id="evening" value="evening">
+                        <label for="evening">Evening (4PM - 7PM)</label>
+                    </fieldset>
+                    <br>
+                    <label for="msg" style="width: 100%;">Message</label>
+                    <br>
+                    <textarea id="msg" name="msg" placeholder="Enter your message"></textarea>
+                    <br>
+                    <button type="submit" style="font-size: 20px; font-weight: bold;">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+<script>
+    let form = document.getElementById("contact-form")
+    form.addEventListener("submit", e => {
+        e.preventDefault()
+        form.style.display = "none"
+        document.querySelector("#contact h2").innerHTML = "Your request has been EXTERMINATED!!!"
+        console.log("Your request has been submitted")
+    })
+
+    function openMenu() {
+        let menu = document.getElementById("nav-links")
+        if (menu.className === "closed") {
+            menu.className = "open"
+        } else {
+            menu.className = "closed"
+        }
+    }
+</script>
+
+</html>

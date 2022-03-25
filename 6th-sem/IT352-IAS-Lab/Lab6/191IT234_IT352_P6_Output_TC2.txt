@@ -1,0 +1,10 @@
+ASCII values of plaintext: [100, 101, 99, 105, 115, 105, 111, 110]
+
+ENCRYPTION OPERATION
+Plaintext: decision
+Ciphertext: /hE
+
+
+DECRYPTION OPERATION
+Ciphertext: /hE
+Plaintext: decision

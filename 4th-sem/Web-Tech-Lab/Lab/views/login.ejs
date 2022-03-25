@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+
+    <title>LOG IN</title>
+
+    <style>
+        #login {
+            background-color: #CD7F32;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 15px gray;
+            width: 90vw;
+        }
+
+        #login-form {
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 17.5px;
+            margin-top: 20px;
+            background-color: gold;
+            padding: 10px 10px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 1s;
+            width: 75%;
+        }
+
+        button:hover {
+            transform: scale(1.15);
+        }
+
+        @media only screen and (min-width: 576px) {
+            #login {
+                width: unset;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="login">
+        <h1>LOG IN</h1>
+        <% if(typeof(success) !== "undefined" && !success) { %>
+            <h2 style="color: darkred;">USER NOT FOUND!!</h2>
+        <% } %>
+        <div id="login-form">
+            <form action="/login" method="POST">
+                <label for="email" class="text-label">Email</label>
+                <input class="text-input" type="text" placeholder="Enter email" id="email" name="email" required>
+                <br>
+                <label for="password" class="text-label">Password</label>
+                <input class="text-input" type="password" placeholder="Enter password" id="password" name="password"
+                    required>
+                <br>
+                <button type="submit">LOG IN</button>
+            </form>
+            <p style="font-size: 15px; text-align: left; margin-top: 25px;">Don't have an account? <a href="/signup"
+                    style="color: gold; text-decoration: none; font-weight: bold;">SIGNUP</a></p>
+            <p id="dt-value" style="font-size: 15px; text-align: center;"></p>
+        </div>
+    </div>
+</body>
+
+<script>
+    let dt = document.getElementById("dt-value")
+
+    dt.innerText = new Date().toString()
+    setInterval(() => {
+        dt.innerText = new Date().toString()
+    }, 1000)
+
+    document.getElementById("login-form").addEventListener("submit", e => {
+        let flag = true
+        let emailRegex = /^[A-Za-z0-9+_.-]+@.+\..+$/
+
+        let email = document.getElementById("email")
+
+        if (!emailRegex.test(email.value)) {
+            alert("Invalid Email entered")
+            flag = false
+        }
+
+        if (!flag) {
+            e.preventDefault()
+        }
+    })
+</script>
+
+</html>

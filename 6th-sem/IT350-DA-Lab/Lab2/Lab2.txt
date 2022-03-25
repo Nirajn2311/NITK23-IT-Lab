@@ -1,0 +1,43 @@
+Assignmnet-2 (Similar Item set- Minhashing)
+
+Assignment Due:  Friday, 18 February 2022, 6:00 PM
+
+Construct several types of k-shingles for all documents. All documents only have at most 27
+
+characters (this is applicable for the English Language Only): all lower case letters and space.
+
+Links of documents to be used (for English Language Content):
+
+1. http://www.textfiles.com/stories/13chil.txt
+
+2. http://www.textfiles.com/stories/3wishes.txt
+
+3. http://www.textfiles.com/stories/3lpigs.txt
+
+4. http://www.textfiles.com/stories/6ablemen.txt
+
+
+
+Sub Tasks
+
+[1] Construct 5-shingles based on characters, for all documents.
+
+[2] Construct 8-shingles based on characters, for all documents.
+
+[3] Construct 4-shingles based on words, for all documents.
+
+Remember, that you should only store each shingle once, duplicates are ignored.
+
+
+
+Questions
+
+A: How many distinct shingles are there for each document with each type of shingle? (3 marks)
+
+B: Compute the Jaccard distance between all pairs of documents for each type of shingling. (1 mark)
+
+C. Change to any Similarity Function (use any recent similarity distance) and check the distance. (1 mark)
+
+D. Try the above all for anyone Indian language. (3 marks)
+
+E. Build a min hash signature for the above experiment and  provide your conclusions for the entire experiment(2 marks)

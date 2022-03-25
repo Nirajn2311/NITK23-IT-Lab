@@ -1,0 +1,42 @@
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:snmp > 192.168.0.2:netarx / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:snmp > 192.168.0.2:netarx / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / 192.168.0.2 > 192.168.37.115 udp frag:111 / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:27664 > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 87.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:sunclustermgr > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / 192.168.0.2 > 192.168.0.1 wb_mon / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / 192.168.0.2 > 192.168.0.1 ddp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+total number of packets checked is = 20
+total number of intrusion packets detected is = 0

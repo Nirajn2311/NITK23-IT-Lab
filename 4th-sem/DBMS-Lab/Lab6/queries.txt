@@ -1,0 +1,23 @@
+1
+
+i. create view order_scname as select o.ord_no "order", c.cust_name "customer", s.name "salesman" from orders o, customer c, salesman s where o.customer_id = c.customer_id and o.salesman_id = s.salesman_id;
+
+ii. create view schighday as select o.ord_date, s.salesman_id, s.name from orders o, salesman s where o.salesman_id = s.salesman_id and o.purch_amt = (select max(purch_amt) from orders o1 where o1.ord_date = o.ord_date);
+
+iii. create view ccountpgrade as select grade, count(*) "count" from customer group by grade;
+
+iv. select * from salesman where city = 'New York' and commission > 0.13;
+
+2
+
+i.
+create view TNS as select m.title "Title", re.name "Name", r.stars "Stars" from Movie m, Reviewer re, Rating r where r.mID = m.mID and r.rID = re.rID;
+select max(m.year) "Year" from TNS v, Movie m where v.Name = "Chris Jackson" and v.Title = m.title;
+
+ii.
+create view RatingStats as select Title, count(*) "No of Ratings", avg(Stars) "Avg Rating" from TNS group by Title having count(*) >= 1;
+select Title from RatingStats where `Avg Rating` = (select max(`Avg Rating`) from RatingStats where `No of Ratings` >= 3);
+
+iii.
+create view Favorites as select rID, mID from Rating r where stars = (select max(stars) from Rating r1 where r1.rID = r.rID);
+select r1.name, r2.name, m.title from Favorites f1, Favorites f2, Reviewer r1, Reviewer r2, Movie m where f1.mID = f2.mID and m.mID = f1.mID and r1.rID = f1.rID and r2.rID = f2.rID and r1.name > r2.name;

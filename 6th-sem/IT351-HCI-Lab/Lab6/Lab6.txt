@@ -1,0 +1,34 @@
+Lab Exercise: Tic Tac Toe game
+
+
+Use MIT app inventor http://appinventor.mit.edu/
+
+Tutorial: https://www.youtube.com/watch?v=NSFLhnv2pQI
+
+Design should be unique in terms of colour, size, layout, actions.
+
+You can add additional features to it other than playing the game(Voice input, Scoring system, creating team, creating league with the team to make interesting)
+
+Marks will be shared between the students if the design is the same or copied. There should be something differentiable in every submission.
+
+
+Evaluation based on 
+
+
+Completeness: It should be working app 30%
+
+Design: colour, look and feel, size, layout 30%
+
+Features: Additional features implemented.  30%
+
+Report: One to two page report about the features added. 10%
+
+
+Submission: apk, screenshot of the app, demo video(Screen recorded) of your product and features.
+
+
+Takeaway
+
+To learn and explore the MIT app inventor to build the android application.
+
+How to design the game and the usage of UI components.

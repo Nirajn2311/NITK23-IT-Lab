@@ -1,0 +1,135 @@
+#container {
+  background-color: lightpink;
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  padding: 25px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#keyboard-type {
+  text-align: center;
+}
+
+#keyboard-type button {
+  font-size: 20px;
+}
+
+#container h3 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+  width: 50%;
+}
+
+#numeric {
+  background-color: lightgray;
+  border: 2px solid black;
+  width: min-content;
+  display: grid;
+  grid-template-areas:
+    'numeric-1 numeric-2 numeric-3'
+    'numeric-4 numeric-5 numeric-6'
+    'numeric-7 numeric-8 numeric-9'
+    'numeric-0 numeric-0 numeric-0';
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+#numeric > div {
+  border: 1px solid black;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#numeric > div:last-child {
+  width: 99%;
+}
+
+#alpha-numeric {
+  background-color: lightgray;
+  border: 2px solid black;
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  margin: 0 auto;
+  font-family: monospace;
+}
+
+#row-numeric {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+#row-qwer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+
+#row-asdf {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+#row-zxcv {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#row-space {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#row-numeric > div {
+  border: 1px solid black;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#row-qwer > div,
+#row-asdf > div,
+#row-zxcv > div,
+#row-space > div {
+  border: 1px solid black;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#numeric > div:hover,
+#row-numeric > div:hover,
+#row-qwer > div:hover,
+#row-asdf > div:hover,
+#row-zxcv > div:hover,
+#row-space > div:hover {
+  background-color: #f3f3f3 !important;
+}
+
+#numeric > div:active,
+#row-numeric > div:active,
+#row-qwer > div:active,
+#row-asdf > div:active,
+#row-zxcv > div:active,
+#row-space > div:active {
+  background-color: #a3a3a3 !important;
+}

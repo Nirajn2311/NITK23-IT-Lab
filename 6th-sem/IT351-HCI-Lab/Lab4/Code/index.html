@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div>
+        <select id="conv-select">
+          <option value="length">Length</option>
+          <option value="mass">Mass</option>
+          <option value="temperature">Temperature</option>
+        </select>
+      </div>
+      <div id='input-container'>
+        <span class="conv-input">
+          <input type="number" id="input1" value="1" />
+          <select id="select1">
+            <option value="cm" selected>cm</option>
+            <option value="m">m</option>
+            <option value="km">km</option>
+          </select>
+        </span>
+        <span id="equal-sign">=</span>
+        <span class="conv-input">
+          <input type="number" id="input2" value="0.01" />
+          <select id="select2">
+            <option value="cm">cm</option>
+            <option value="m" selected>m</option>
+            <option value="km">km</option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </body>
+</html>

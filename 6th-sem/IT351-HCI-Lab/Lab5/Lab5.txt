@@ -1,0 +1,1 @@
+Design and create two different user interfaces for entering field observation data for the forest tree census application: Date and time of observation, tree-ID, tree name, tree type, GPS location and measurements need to be entered to the application. Critique on both user interfaces taking into account the design and general UI principles.

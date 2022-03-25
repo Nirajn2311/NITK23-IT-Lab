@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+
+    <title>THE DALEK FOUNDATION</title>
+
+</head>
+
+<body>
+    <%- include ("partials/nav.ejs") %>
+        <div class="clear" style="height: 50px;"></div>
+        <main style="text-align: center;">
+            <div id="landing-video">
+                <video src="/assets/dd-vid.mkv" muted loop width="100%" height="100%" style="display: block;"></video>
+            </div>
+            <div id="desc" class="pad">
+                <p>WE PROVIDE SECURITY</p>
+                <p>YOUR LIVES ARE IMPORTANT TO US</p>
+                <p>MOST IMPORTANTLY WE EXTERMINATE OUR THREATS</p>
+            </div>
+            <div id="features">
+                <div id="dd-img">
+                    <figure>
+                        <img src="/assets/dd-pic.jpg" alt="Picture of Defense Drone" width="100%"
+                            style="display: block;">
+                        <figcaption><em>DEFENSE DRONE</em></figcaption>
+                    </figure>
+                </div>
+                <div id="feat-text">
+                    <p style="margin: unset;">FEATURES</p>
+                    <p style="margin-top: 40px;">Made of Dalekanium</p>
+                    <p>Gunstick that shoots water</p>
+                    <p>Gas emitter</p>
+                    <p>Controlled by our technicians</p>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="audio-demo" class="pad">
+                <p>HEAR THEM EXTERMINATE</p>
+                <audio src="/assets/dd-aud.mp3" controls loop></audio>
+            </div>
+            <div class="slideshow">
+                <div class="slides fade">
+                    <img style="width: 100%" src="/assets/slide1.jpg">
+                </div>
+                <div class="slides fade">
+                    <img style="width: 100%;" src="/assets/slide2.jpg">
+                </div>
+                <div class="slides fade">
+                    <img style="width: 100%;" src="/assets/slide3.jpg">
+                </div>
+            </div>
+            <div id="contact" class="pad">
+                <h2 style="font-size: 25px; font-weight: bold;">Contact Us</h2>
+                <div id="contact-form">
+                    <form action="/form" method="POST">
+                        <fieldset>
+                            <legend style="padding: 0 10px;">Title</legend>
+                            <input type="radio" id="Mr" name="title" value="Mr" required>
+                            <label for="Mr">Mr.</label>
+                            <br>
+                            <input type="radio" id="Mrs" name="title" value="Mrs" required>
+                            <label for="Mrs">Mrs.</label>
+                            <br>
+                            <input type="radio" id="Other" name="title" value="Other" required>
+                            <label for="Other">Other</label>
+                        </fieldset>
+                        <br>
+                        <label for="name" class="text-label">Name</label>
+                        <input class="text-input" type="text" id="name" name="name" placeholder="Enter Name" required>
+                        <br>
+                        <label for="email" class="text-label">Email</label>
+                        <input class="text-input" type="text" id="email" name="email" placeholder="example@example.com"
+                            required>
+                        <br>
+                        <label for="reason" class="text-label">Reason</label>
+                        <select id="reason" name="reason" class="text-input" required>
+                            <option value="">Choose an option</option>
+                            <option value="Demo">Demo Request</option>
+                            <option value="Quote">Get a quote</option>
+                            <option value="Egg">EXTERMINATE!!</option>
+                        </select>
+                        <br>
+                        <fieldset id="time">
+                            <legend style="padding: 0 10px;">Contact Time</legend>
+                            <input type="checkbox" name="time" id="Morning" value="Morning">
+                            <label for="Morning">Morning (9AM - Noon)</label>
+                            <br>
+                            <input type="checkbox" name="time" id="Afternoon" value="Afternoon">
+                            <label for="Afternoon">Afternoon (Noon - 4PM)</label>
+                            <br>
+                            <input type="checkbox" name="time" id="Evening" value="Evening">
+                            <label for="Evening">Evening (4PM - 7PM)</label>
+                        </fieldset>
+                        <br>
+                        <label for="msg" style="width: 100%;">Message</label>
+                        <br>
+                        <textarea id="msg" name="msg" placeholder="Enter your message"></textarea>
+                        <br>
+                        <button type="submit" style="font-size: 20px; font-weight: bold;">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+</body>
+
+<script>
+    let form = document.getElementById("contact-form")
+    let menuIcon = document.getElementById("menu-icon")
+    let slideIndex = 1
+
+    form.addEventListener("submit", e => {
+
+        let flag = true
+        let emailRegex = /^[A-Za-z0-9+_.-]+@.+\..+$/
+
+        let email = document.getElementById("email")
+
+        if (!emailRegex.test(email.value)) {
+            alert("Invalid Email entered")
+            flag = false
+        }
+
+        if (!flag) {
+            e.preventDefault()
+            alert("ENTER VALID DETAILS")
+        }
+    })
+
+    menuIcon.addEventListener("click", () => {
+        let menu = document.getElementById("nav-links")
+        if (menu.className === "closed") {
+            menu.className = "open"
+        } else {
+            menu.className = "closed"
+        }
+    })
+
+    function showSlides() {
+        let i
+        let slides = document.getElementsByClassName("slides")
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none"
+        }
+        slideIndex++
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block"
+        setTimeout(showSlides, 5000)
+    }
+
+    showSlides(slideIndex)
+</script>
+
+</html>

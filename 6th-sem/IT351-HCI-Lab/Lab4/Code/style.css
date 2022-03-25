@@ -1,0 +1,50 @@
+body {
+  background-color: gray;
+}
+
+.container {
+  background-color: white;
+  position: absolute;
+  width: 500px;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid black;
+}
+
+#conv-select {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+#input-container {
+  display: flex;
+  gap: 10px;
+}
+
+#equal-sign {
+  font-size: 30px;
+}
+
+.conv-input {
+  display: inline-flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 10px;
+}
+
+input {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px 5px;
+}
+
+.conv-input > select {
+  margin-top: 10px;
+  font-size: 1rem;
+}

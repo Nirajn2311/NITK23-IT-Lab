@@ -1,0 +1,68 @@
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 37.115.0.1:snmp > 192.168.0.2:netarx / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:snmp > 82.168.0.2:netarx / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:4257 / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:1024 > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Intrusion Packet
+Ether / 170.170.170.170 > 170.170.170.170 170 frag:2730 / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / 192.168.0.2 > 192.168.0.1 udp frag:768 / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.207:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:9587 / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.88:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.172.0.2:netarx > 192.168.0.1:snmp / Raw / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:ctf / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.56.2:netarx > 192.168.0.1:snmp / Raw
+total number of packets checked is = 33
+total number of intrusion packets detected is = 1

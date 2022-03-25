@@ -1,0 +1,10 @@
+ENCRYPTION OPERATION
+Plaintext: cyber world
+Ciphertext: hazfv nkfco
+Key: fcyberworl
+
+
+DECRYPTION OPERATION
+Ciphertext: hazfv nkfco
+Plaintext: cyber world
+Key: fcyberworl

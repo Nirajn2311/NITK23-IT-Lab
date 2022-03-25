@@ -1,0 +1,219 @@
+1.
+create table Employee(Emp_number int not null primary key, first_name varchar(30), last_name varchar(30), Salary int);
+
+insert into Employee values (1, 'William', 'Hartnell', 10000), (2, 'Patrick', 'Throughton', 20000), (3, 'Jon', 'Pertwee', 30000), (4, 'Tom', 'Baker', 40000), (5, 'Peter', 'Davison', 50000), (6, 'Colin', 'Baker', 60000), (7, 'Sylvester', 'McCoy', 70000), (8, 'Paul', 'McGann', 80000), (9, 'Christopher', 'Eccelston', 90000), (10, 'David', 'Tennant', 100000), (11, 'Matt', 'Smith', 110000), (12, 'Peter', 'Capaldi', 120000), (13, 'Jodie', 'Whittaker', 130000);
+
+delimiter $$
+
+create procedure usp_get_employees_salary_above(in sal int)
+begin
+select first_name, last_name
+from Employee
+where Salary >= sal
+order by first_name, last_name;
+end $$
+
+delimiter ;
+
+call usp_get_employees_salary_above(90000);
+
+
+2.
+CREATE TABLE pgm2(
+Name VARCHAR(20)
+);
+
+INSERT INTO pgm2 VALUES
+('Bangalore'),
+('Delhi'),
+('Mysore'),
+('Mangalore');
+
+DELIMITER $$
+CREATE PROCEDURE usp_get_towns_starting_with(prefix VARCHAR(20))
+BEGIN
+SELECT Name AS "town"
+FROM pgm2
+WHERE Name LIKE concat(prefix, "%")
+ORDER BY Name;
+END $$
+DELIMITER ;
+
+CALL usp_get_towns_starting_with("M"); 
+
+
+3.
+> delimiter $$
+> create function ufn_get_salary_level(sal int)
+> returns varchar(10)
+> deterministic
+> begin 
+> declare lvl varchar(10);
+> if sal < 30000 then
+> set lvl = 'Low';
+> elseif (sal >= 30000 and sal <= 50000) then
+> set lvl = 'Average';
+> elseif sal > 50000 then
+> set lvl = 'High';
+> end if; 
+> return (lvl);
+> end $$
+> delimiter ;
+> select ufn_get_salary_level(20000);
+> select ufn_get_salary_level(40000);
+> select ufn_get_salary_level(60000);
+
+
+4.
+> delimiter $$
+> create function ufn_calculate_future_value(p decimal(8,2), r decimal(5,2), t decimal(5,2))
+> returns decimal(8,2)
+> deterministic
+> begin
+> declare interest decimal(8,2);
+> select pow(1+r, t) into interest;
+> set interest = p*interest;
+> return (interest);
+> end $$
+> select ufn_calculate_future_value(1000, 0.1, 5);
+
+
+5.
+> CREATE TABLE Student(Roll_number INTEGER NOT NULL PRIMARY KEY, Name VARCHAR(50), Total_Marks INTEGER);
+> 
+> INSERT INTO Student Values
+> (34, 'Prasad', 460),
+> (25, 'Gaurang', 465),
+> (3, 'Binod', 450),
+> (4, 'Pranav', 485),
+> (30, 'Vijay', 490),
+> (12, 'Kumar', 453),
+> (8, 'Sanjay', 480),
+> (6, 'Mihir', 440),
+> (5, 'Nitya', 495),
+> (15, 'Pushpa', 495),
+> (21, 'Radhika', 455),
+> (18, 'Mahika', 470),
+> (11, 'Bhavika', 465);
+> 
+> delimiter $$
+> create procedure Student_Marks(in rn int)
+> begin
+> select Name, Total_Marks
+> from Student
+> where Total_Marks >= (select Total_Marks from Student where Roll_number = rn)
+> order by Total_Marks desc;
+> end $$
+> delimiter ;
+> call Student_Marks(8);
+
+
+6.
+> delimiter $$
+> create function Get_Grade_level(rn int)
+> returns char(2)
+> deterministic
+> begin
+> declare t_marks int;
+> declare lvl char(2);
+> select Total_Marks into t_marks from Student where Roll_number = rn;
+> if t_marks < 300 then
+> set lvl = "C";
+> elseif (t_marks >= 300 and t_marks <= 400) then
+> set lvl = "B";
+> elseif (t_marks > 400 and t_marks <= 450) then
+> set lvl = "A";
+> elseif (t_marks > 450 and t_marks <= 475) then
+> set lvl = "A+";
+> elseif t_marks > 475 then
+> set lvl = "S";
+> end if;
+> return (lvl);
+> end $$
+> delimiter ;
+> select Get_Grade_level(8);
+
+
+7.
+> delimiter $$
+> create function Get_Sum(num int)
+> returns int
+> deterministic
+> begin
+> return (num*(num+1)/2);
+> end $$
+> delimiter ;
+> select Get_Sum(5);
+
+
+8.
+> delimiter $$
+> create function IT_Rate_employee(sal int)
+> returns decimal(8,2)
+> deterministic
+> begin
+> declare it_rate int;
+> if sal > 100000 then
+> set it_rate = 20;
+> elseif (sal <= 100000 and sal >= 50000) then
+> set it_rate = 15;
+> elseif sal < 50000 then
+> set it_rate = 10;
+> end if;
+> return (sal * it_rate/100);
+> end $$
+> delimiter ;
+> select IT_Rate_employee(60000);
+
+
+9.
+> alter table Employee rename column Salary to Basicpay;
+> alter table Employee add Gross_pay decimal(8,2);
+> alter table Employee add Net_pay decimal(8,2);
+> 
+> delimiter $$
+> create procedure Net_Pay_employee(in emp_no int)
+> begin
+> declare sal int;
+> declare it int;
+> declare gp int;
+> declare np int;
+> select Basicpay into sal from Employee where Emp_number = emp_no;
+> set it = IT_Rate_employee(sal);
+> set gp = sal + (sal*0.12) + (sal*0.1);
+> set np = gp - it;
+> update Employee set Gross_pay = gp where Emp_number = emp_no;
+> update Employee set Net_pay = np where Emp_number = emp_no;
+> select Gross_pay, Net_pay
+> from Employee
+> where Gross_pay is not null and Net_pay is not null
+> order by Net_pay desc;
+> end $$
+> delimiter ;
+> call Net_Pay_employee(1);
+> call Net_Pay_employee(8);
+> call Net_Pay_employee(12);
+
+
+10.
+> create table Books(BookID int primary key, Title varchar(50));
+> 
+> delimiter $$
+> create procedure InsertBooks(in inBookID int, in inTitle varchar(50))
+> begin
+> declare exit handler for 1062
+> begin
+> select concat('Duplicate key: BookID ', inBookID, ' exists') as message;
+> end;
+> declare exit handler for 1146
+> begin
+> select 'Table Books missing. Please create table first.' as Message;
+> end;
+> insert into Books(BookID, Title) values (inBookID, inTitle);
+> select count(*) from Books where BookID = inBookID;
+> end $$
+> delimiter ;
+> call InsertBooks(1, 'Thrawn');
+> call InsertBooks(1, 'Chaos Rising');
+> drop table Books;
+> call InsertBooks(2, 'Hello There');

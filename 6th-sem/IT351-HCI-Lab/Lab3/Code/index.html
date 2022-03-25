@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="page-1">
+      <h2>Steps</h2>
+      <ul>
+        <li>In the next page, you will be shown a list of animals.</li>
+        <li>Try to remember the animals mentally.</li>
+        <li>
+          You will have only 10 seconds to look at the list of animals and
+          remember them, after which the page will automatically change.
+        </li>
+        <li>A timer will indicate the remaining time.</li>
+        <li>When you are ready, click on the START button</li>
+        <li>Once started, you will not be able to return.</li>
+      </ul>
+      <button id="start" onclick="startExperiment()">START</button>
+    </div>
+    <div id="page-2" style="display: none">
+      <h2>Remaining Time: <span id="rem-time">10</span> seconds</h2>
+      <ul id="animal-list"></ul>
+    </div>
+    <div id="page-3" style="display: none">
+      <h2>Instructions</h2>
+      <ul id="instructions">
+        <li>
+          From the given list of animals, identify the animals which were in the
+          list previously shown to you and memorized by you.
+        </li>
+        <li>Select the animals by clicking on them.</li>
+        <li>
+          If you wish to deselect them, you can click on the respective animal
+          again.
+        </li>
+        <li>
+          As only 8 animals were shown, you don't need to select more than 8
+          animals. Selecting more than 8 animals will show an error.
+        </li>
+        <li>
+          Once you have selected all the animals, click on the SUBMIT button.
+        </li>
+      </ul>
+      <ul id="all-animal-list"></ul>
+      <h4 id="error" style="display: none">
+        Error: <span id="error-msg"></span>
+      </h4>
+      <button id="submit" onclick="results()">SUBMIT</button>
+    </div>
+    <div id="page-4" style="display: none">
+      <h2>Results</h2>
+      <h3 id="results"></h3>
+      <p>Recall % = <span id="recall-val"></span></p>
+      <ul id="recall-list"></ul>
+      <button id="restart" onclick="location.reload()">Restart</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

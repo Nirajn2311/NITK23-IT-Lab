@@ -1,0 +1,32 @@
+Analyzed Packet is Not-Intrusion Packet
+00:20:af:1b:07:fa > 80:e0:25:73:00:fb (DEBNI) / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:snmp > 192.168.0.2:netarx / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.232.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:snmp > 192.168.0.2:netarx / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:snmp > 192.168.0.2:netarx / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+00:e0:29:68:8b:fb > 00:20:af:1b:07:fa (0x840) / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / Raw
+Analyzed Packet is Not-Intrusion Packet
+802.3 00:e0:29:68:25:73 > 00:20:af:1b:07:fa / Padding
+Analyzed Packet is Not-Intrusion Packet
+00:20:af:1b:07:fa > 00:e0:29:68:8b:fb (0x4500) / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:dls > 192.168.0.2:netarx / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.2:netarx > 192.168.0.1:snmp / SNMP
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / UDP 192.168.0.1:snmp > 192.168.0.2:netarx / Raw
+total number of packets checked is = 15
+total number of intrusion packets detected is = 0

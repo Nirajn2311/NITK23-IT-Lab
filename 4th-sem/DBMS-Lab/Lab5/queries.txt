@@ -1,0 +1,19 @@
+1. select P.Name "Physician", D.Name "Department" from PhysicianE P, Department D, Affiliated_With A where P.EmployeeID = A.Physician and D.DepartmentID = A.Department;
+
+2. select P.Name "Patient", Ph.Name "Physician" from Patient P, PhysicianE Ph, Appointment A where P.SSN = A.Patient and Ph.EmployeeID = A.Physician and A.PrepNurse is null;
+
+3. select P.Name "Patient", Ph.Name "Physician", M.Name "Medicine" from Patient P, PhysicianE Ph, Medication M, Prescribes Pr where Pr.Patient = P.SSN and Pr.Physician = Ph.EmployeeID and Pr.Medication = M.Code;
+
+4. select P.Name "Patient", Ph.Name "Physician", M.Name "Medicine" from Patient P, PhysicianE Ph, Medication M, Prescribes Pr where Pr.Patient = P.SSN and Pr.Physician = Ph.EmployeeID and Pr.Medication = M.Code and Pr.Appointment is not null;
+
+5. select P.Name "Patient", R.BlockCode "Block", R.BlockFloor "Floor", S.Room "Room Number" from Patient P, Stay S, Room R where S.Patient = P.SSN and S.Room = R.RoomNumber;
+
+6. select P.Name "Patient", Ph.Name "Physician", N.Name "Nurse", Pr.Name "Treatment", S.StayEnd "Date of Release", S.Room "Room", R.BlockFloor "Floor", R.BlockCode "Block" from Undergoes U join Patient P on U.Patient = P.SSN join PhysicianE Ph on U.Physician = Ph.EmployeeID left join Nurse N on U.AssistingNurse = N.EmployeeID join Procedures Pr on U.Procedures = Pr.Code join Stay S on U.Stay = S.StayID join Room R on S.Room = R.RoomNumber;
+
+7. select Name, Position from PhysicianE where EmployeeID in (select Physician from Undergoes U where DateUndergoes > (select CertificationExpires from Trained_In T where U.Physician = T.Physician and U.Procedures = T.Treatment));
+
+8. select P.Name from Appointment A join Patient P on A.Patient = P.SSN join Nurse N on A.PrepNurse = N.EmployeeID join PhysicianE Ph on P.PCP = Ph.EmployeeID where A.Patient in (select a.Patient from Appointment a group by a.Patient having count(*) >= 2) and N.Registered = 1;
+
+9. select P.Name "Patient", Ph.Name "Physician" from Patient P, PhysicianE Ph, Undergoes U, Procedures Pr where P.PCP = Ph.EmployeeID and P.SSN = U.Patient and U.Procedures = Pr.Code and Pr.Cost > 5000;
+
+10. select P.Name "Patient", Ph.Name "Physician" from Patient P, PhysicianE Ph, Prescribes Pr where P.PCP = Ph.EmployeeID and P.SSN = Pr.Patient and P.PCP = Pr.Physician;

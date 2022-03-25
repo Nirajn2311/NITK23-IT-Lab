@@ -1,0 +1,2 @@
+ASCII values of plaintext: [97, 102, 102, 101, 99, 116, 101, 100]
+Key-inverse does not exist

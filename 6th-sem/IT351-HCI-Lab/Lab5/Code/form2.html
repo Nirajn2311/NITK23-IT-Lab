@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="form2.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title" class="text-center my-3">Enter forest field data</h1>
+      <form id="form1">
+        <div class="mb-3">
+          <label for="tree_id">Tree ID: </label>
+          <input
+            type="text"
+            id="treeid"
+            name="treeid"
+            placeholder="Enter Tree ID"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="tree_name">Tree Name: </label>
+          <input
+            type="text"
+            id="treename"
+            name="treename"
+            placeholder="Enter Tree Name"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="tree_types">Choose a tree type:</label>
+          <select id="treetype" name="treetype" required>
+            <optgroup label="Deciduous">
+              <option value="Oak Trees">Oak</option>
+              <option value="Maple">Maple</option>
+              <option value="Honeysuckle">Honeysuckle</option>
+            </optgroup>
+            <optgroup label="Evergreen">
+              <option value="white pine">White pine</option>
+              <option value="red cedar">red cedar</option>
+              <option value="blue spruce">Blue spruce</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="tree_length">Tree Measurement Length (m): </label>
+          <input
+            type="text"
+            id="treelength"
+            name="treelength"
+            placeholder="Enter Tree Length"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="tree_girth">Tree Measurement Girth (m): </label>
+          <input
+            type="text"
+            id="treegirth"
+            name="treegirth"
+            placeholder="Enter Tree Girth"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="observation_date_time">Observation Date and Time: </label>
+          <input
+            type="datetime-local"
+            id="datetime"
+            name="datetime"
+            placeholder="Enter datae and time"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="gps_latitute">GPS Latitude: </label>
+          <input
+            type="text"
+            id="gpslatitude"
+            name="gpslatitude"
+            placeholder="Enter GPS Latitude"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="gps_longitude">GPS Longitude: </label>
+          <input
+            type="text"
+            id="gpslongitude"
+            name="gpslongitude"
+            placeholder="Enter GPS Longitude"
+            required
+          />
+        </div>
+        <div class="mb-3" style="text-align: center">
+          <input type="submit" style="width: 100px" />
+        </div>
+      </form>
+      <h1 id="heading" class="text-center my-3"></h1>
+      <p id="Name"></p>
+      <p id="ID"></p>
+      <p id="type"></p>
+      <p id="Length"></p>
+      <p id="Girth"></p>
+      <p id="date"></p>
+      <p id="gpslat"></p>
+      <p id="gpslong"></p>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

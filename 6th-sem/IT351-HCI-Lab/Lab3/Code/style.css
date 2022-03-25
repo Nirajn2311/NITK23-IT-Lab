@@ -1,0 +1,66 @@
+html {
+  background-color: gray;
+}
+
+body {
+  border: 3px solid black;
+  min-width: 500px;
+  width: 50vw;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: white;
+}
+
+h2 {
+  text-align: center;
+}
+
+ul {
+  padding-inline-start: 1.25rem;
+}
+
+#start,
+#submit,
+#restart {
+  display: block;
+  margin: 0 auto 1.5rem;
+  font-size: 1rem;
+}
+
+#animal-list, #all-animal-list, #recall-list {
+  padding-inline-start: 0;
+}
+
+#page-2 li, #all-animal-list li, #recall-list li {
+  list-style: none;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 0.25rem 2px;
+  margin: 0.25rem 2px;
+  display: inline-block;
+  width: 100%;
+}
+
+#all-animal-list {
+  columns: 2;
+  column-fill: auto;
+}
+
+#error {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#all-animal-list > li,
+#recall-list > li {
+  border: 1px #0000;
+}
+
+#all-animal-list > li.selected,
+#recall-list > li.selected {
+  border: 1px solid #000;
+}

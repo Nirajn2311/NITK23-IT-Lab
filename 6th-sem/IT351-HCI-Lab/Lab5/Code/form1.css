@@ -1,0 +1,25 @@
+body {
+  background-color: lightskyblue !important;
+}
+
+.container {
+  background-color: white;
+  width: 750px !important;
+  border: 3px solid black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 0.5rem;
+}
+
+form > * {
+  flex: 0 32%;
+  height: 30px;
+}

@@ -1,0 +1,10 @@
+ENCRYPTION OPERATION
+Plaintext: stealthy techniques
+Ciphertext: klxeleaf rxgjuvykyw
+Key: sstealthytechnique
+
+
+DECRYPTION OPERATION
+Ciphertext: klxeleaf rxgjuvykyw
+Plaintext: stealthy techniques
+Key: sstealthytechnique

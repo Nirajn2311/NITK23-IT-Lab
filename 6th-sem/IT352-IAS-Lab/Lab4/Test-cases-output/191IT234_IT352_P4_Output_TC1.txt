@@ -1,0 +1,10 @@
+ENCRYPTION OPERATION
+Plaintext: information security
+Ciphertext: avstfdmtbwb fwgwlzbr
+Key: sinformationsecurit
+
+
+DECRYPTION OPERATION
+Ciphertext: avstfdmtbwb fwgwlzbr
+Plaintext: information security
+Key: sinformationsecurit

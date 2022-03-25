@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item1"
+        android:title="A-E"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sub_item1"
+                android:title="Bed" />
+            <item
+                android:id="@+id/sub_item2"
+                android:title="Blanket" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/item2"
+        android:title="F-L"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sub_item3"
+                android:title="Fridge" />
+            <item
+                android:id="@+id/sub_item4"
+                android:title="Lamp" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item3"
+        android:title="M-R"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sub_item5"
+                android:title="Mirror" />
+            <item
+                android:id="@+id/sub_item6"
+                android:title="Pillow" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/item4"
+        android:title="S-Z"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/sub_item7"
+                android:title="Sofa" />
+            <item
+                android:id="@+id/sub_item8"
+                android:title="Stove" />
+        </menu>
+    </item>
+</menu>

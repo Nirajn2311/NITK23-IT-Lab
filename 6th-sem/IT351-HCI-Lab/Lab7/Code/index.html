@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="keyboard-type">
+        <button onclick="changeKeyboard(1)">NUMERIC</button>
+        <button onclick="changeKeyboard(2)">ALPHA-NUMERIC</button>
+      </div>
+      <h3>Use the virtual keyboard below to enter text</h3>
+      <input type="text" id="input" />
+      <div id="numeric" style="display: none">
+        <div style="grid-area: numeric-2"></div>
+        <div style="grid-area: numeric-3"></div>
+        <div style="grid-area: numeric-1"></div>
+        <div style="grid-area: numeric-4"></div>
+        <div style="grid-area: numeric-5"></div>
+        <div style="grid-area: numeric-6"></div>
+        <div style="grid-area: numeric-7"></div>
+        <div style="grid-area: numeric-8"></div>
+        <div style="grid-area: numeric-9"></div>
+        <div style="grid-area: numeric-0"></div>
+      </div>
+      <div id="alpha-numeric">
+        <div id="row-numeric">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="row-qwer">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="row-asdf">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="row-zxcv">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div id="row-space">
+          <div onclick="changeCase()" id="caps-lock-btn">CAPS LOCK</div>
+          <div onclick="appendInputValue(' ')">SPACE</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

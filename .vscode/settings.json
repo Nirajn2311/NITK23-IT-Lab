@@ -1,0 +1,7 @@
+{
+	"python.dataScience.jupyterServerURI": "local",
+	"C_Cpp.errorSquiggles": "Disabled",
+	"files.associations": {
+		"iostream": "cpp"
+	}
+}

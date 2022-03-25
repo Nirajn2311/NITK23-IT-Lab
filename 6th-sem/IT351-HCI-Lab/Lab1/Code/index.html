@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fitt's Law</title>
+  </head>
+
+  <body>
+    <h1>Fitt's Law</h1>
+    <h3>Click the circles</h3>
+    <div class="container">
+      <div class="directions">
+        <h3>Click Start to Begin!</h3>
+      </div>
+      <button type="button">Start</button>
+      <div class="message"></div>
+      <div class="results">
+        <p style="text-align: center;">Click start to Play again.</p>
+        <div id="analysis">
+          <div id="info-table">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Circle No.</th>
+                  <th scope="col">Selection Time(s)</th>
+                  <th scope="col">Target Distance(px)</th>
+                  <th scope="col">Circle Diameter(px)</th>
+                </tr>
+              </thead>
+              <tbody id="info-table-body"></tbody>
+            </table>
+          </div>
+          <div>
+            <canvas id="info-graph"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="gameArea"></div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <script src="index.js"></script>
+    </div>
+  </body>
+</html>

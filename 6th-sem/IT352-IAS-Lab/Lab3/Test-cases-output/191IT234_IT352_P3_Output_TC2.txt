@@ -1,0 +1,52 @@
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:57011 > 72.14.213.138:http PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.138:http > 192.168.3.131:57011 PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:55950 > 72.14.213.102:http S
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:57011 > 72.14.213.138:http A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.102:http > 192.168.3.131:55950 SA
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:55950 > 72.14.213.102:http A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:55950 > 72.14.213.102:http PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:55950 > 72.14.213.102:http FA
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.102:http > 192.168.3.131:55950 A / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.102:http > 192.168.3.131:55950 PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:55950 > 72.14.213.102:http RA
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.102:http > 192.168.3.131:55950 FA / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:52152 > 72.14.213.147:https S
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.147:https > 192.168.3.131:52152 SA
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:52152 > 72.14.213.147:https A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:52152 > 72.14.213.147:https PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.147:https > 192.168.3.131:52152 A / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.147:https > 192.168.3.131:52152 A / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.147:https > 192.168.3.131:52152 PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:52152 > 72.14.213.147:https A
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:52152 > 72.14.213.147:https PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.147:https > 192.168.3.131:52152 PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.147:https > 192.168.3.131:52152 PA / Raw
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 72.14.213.147:https > 192.168.3.131:52152 A / Padding
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 192.168.3.131:52152 > 72.14.213.147:https A
+total number of packets checked is = 25
+total number of intrusion packets detected is = 0

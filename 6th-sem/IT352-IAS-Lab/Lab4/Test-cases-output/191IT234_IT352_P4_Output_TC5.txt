@@ -1,0 +1,10 @@
+ENCRYPTION OPERATION
+Plaintext: computer networks
+Ciphertext: lqabjnxv erxpkfbc
+Key: jcomputernetwork
+
+
+DECRYPTION OPERATION
+Ciphertext: lqabjnxv erxpkfbc
+Plaintext: computer networks
+Key: jcomputernetwork

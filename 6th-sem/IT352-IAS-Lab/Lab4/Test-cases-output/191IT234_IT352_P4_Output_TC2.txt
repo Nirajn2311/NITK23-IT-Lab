@@ -1,0 +1,10 @@
+ENCRYPTION OPERATION
+Plaintext: network security attack
+Ciphertext: irxpkfb cwgwlzbr ytmtcm
+Key: vnetworksecurityattac
+
+
+DECRYPTION OPERATION
+Ciphertext: irxpkfb cwgwlzbr ytmtcm
+Plaintext: network security attack
+Key: vnetworksecurityattac

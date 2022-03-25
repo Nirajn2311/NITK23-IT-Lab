@@ -1,0 +1,112 @@
+1.
+create table STUDENT_MARKS(
+STUDENT_ID int not null primary key,
+NAME varchar(30),
+SUB1 int default 0,
+SUB2 int default 0,
+SUB3 int default 0,
+SUB4 int default 0,
+SUB5 int default 0,
+TOTAL int default 0,
+PER_MARKS decimal(5,2) default 0.00,
+GRADE varchar(20) default ''
+);
+
+insert into STUDENT_MARKS (STUDENT_ID, NAME) values
+(1, 'Steven King'),
+(2, 'Neena Kochhar'),
+(3, 'Lex De Haan'),
+(4, 'Alexander Hunold');
+
+delimiter $$
+
+create trigger upd_stud_tmarks
+before update
+on STUDENT_MARKS for each row
+begin
+set new.TOTAL = new.SUB1 + new.SUB2 + new.SUB3 + new.SUB4 + new.SUB5;
+set new.PER_MARKS = new.TOTAL/5;
+if new.PER_MARKS >= 90 then
+set new.GRADE = "EXCELLENT";
+elseif new.PER_MARKS >= 75 and new.PER_MARKS < 90 then
+set new.GRADE = "VERY GOOD";
+elseif new.PER_MARKS >= 60 and new.PER_MARKS < 75 then
+set new.GRADE = "GOOD";
+elseif new.PER_MARKS >= 40 and new.PER_MARKS < 60 then
+set new.GRADE = "AVERAGE";
+elseif new.PER_MARKS < 40 then
+set new.GRADE = "NOT PROMOTED";
+end if;
+end $$
+
+delimiter ;
+
+update STUDENT_MARKS set SUB1 = 54, SUB2 = 69, SUB3 = 89, SUB4 = 87, SUB5 = 59 where STUDENT_ID = 1
+
+select * from STUDENT_MARKS;
+
+
+2.
+delimiter $$
+
+create trigger blog_after_insert
+after insert
+on blog for each row
+begin
+if new.deleted then
+insert into audit (blog_id, changetype) values (new.id, 'DELETE');
+else
+insert into audit (blog_id, changetype) values (new.id, 'NEW');
+end if;
+end $$
+
+create trigger blog_after_update
+after update
+on blog for each row
+begin
+if new.deleted then
+insert into audit (blog_id, changetype) values (new.id, 'DELETE');
+else
+insert into audit (blog_id, changetype) values (new.id, 'EDIT');
+end if;
+end $$
+
+delimiter ;
+
+insert into blog values (1, 'Article One', 'Initial text', 0);
+select * from audit;
+update blog set content = 'Edited text' where id = 1;
+select * from audit;
+
+
+3.
+create table Customer_Bank(
+Account_No int not null,
+Customer_Name varchar(50),
+Address varchar(75),
+Branch_Code int,
+Type_of_Transaction varchar(30),
+Balance_Amount decimal(8,2)
+);
+
+delimiter $$
+create trigger type before update on Customer_Bank for each row
+begin
+declare amount int default 0;
+declare type_type varchar(50);
+select new.Balance_Amount into amount;
+select new.Type_of_Transaction into type_type;
+if type_type = 'Credit' then
+set new.Balance_Amount = amount + old.Balance_Amount;
+elseif type_type = 'Debit' and amount<=50000 and amount<old.Balance_Amount then
+set new.Balance_Amount = old.Balance_Amount - amount;
+end if;
+end $$
+
+delimiter ;
+
+insert into Customer_Bank values (1, 'Niraj', 'Mysore', 12345, 'Credit', 50000);
+update Customer_Bank set Balance_Amount = 65000 where Account_No = 1;
+
+insert into Customer_Bank values (2, 'Tom', 'UK', 2345, 'Credit', 100000);
+update Customer_Bank set Balance_Amount = 30000 where Account_No = 2;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>THE DALEK FOUNDATION</title>
+
+    <style>
+        body {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: lightgreen;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <% if(data) { %>
+        <h1>FORM SUBMITTED</h1>
+        <p><b>TITLE:</b> <%= data.title %></p>
+        <p><b>NAME:</b> <%= data.name %></p>
+        <p><b>EMAIL:</b> <%= data.email %></p>
+        <p><b>REASON:</b> <%= data.reason %></p>
+        <p><b>TIME:</b> <%= Array.isArray(data.time) ? data.time.join(', ') : data.time %></p>
+        <p><b>MESSAGE:</b> <%= data.msg %></p>
+        <% } else { %>
+            <h1>FORM NOT SUBMITTED!!</h1>
+            <% } %>
+</body>
+
+</html>

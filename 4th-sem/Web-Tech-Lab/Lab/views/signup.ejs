@@ -1,0 +1,131 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+
+    <title>SIGN UP</title>
+
+    <style>
+        #signup {
+            background-color: #CD7F32;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 0 15px gray;
+            width: 90vw;
+        }
+
+        #signup-form {
+            padding: 15px;
+            font-size: 20px;
+        }
+
+        label {
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+
+        input {
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 17.5px;
+            margin-top: 20px;
+            background-color: gold;
+            padding: 10px 10px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            transition: transform 1s;
+            width: 75%;
+        }
+
+        button:hover {
+            transform: scale(1.15);
+        }
+
+        @media only screen and (min-width: 576px) {
+            #signup {
+                width: unset;
+            }
+
+            label {
+                width: 200px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="signup">
+        <h1>SIGN UP</h1>
+        <% if(typeof(success) !== "undefined" && !success) { %>
+            <h2 style="color: darkred;">USER ALREADY EXISTS!!</h2>
+        <% } %>
+        <div id="signup-form">
+            <form action="/signup" method="POST">
+                <label class="text-label" for="email">Email</label>
+                <input class="text-input" type="text" placeholder="Enter email" id="email" name="email" required>
+                <br>
+                <label class="text-label" for="password">Password</label>
+                <input class="text-input" type="password" placeholder="Enter password" id="password" name="password" required>
+                <br>
+                <label class="text-label">Confirm Password</label>
+                <input class="text-input" type="password" placeholder="Re-enter password" id="re-password" required>
+                <br>
+                <button type="submit">SIGN UP</button>
+            </form>
+            <p style="font-size: 15px; text-align: left; margin-top: 25px;">Have an account? <a href="/login"
+                    style="color: gold; text-decoration: none; font-weight: bold;">LOGIN</a>
+            </p>
+            <p id="dt-value" style="font-size: 15px; text-align: center;"></p>
+        </div>
+    </div>
+</body>
+
+<script>
+    let dt = document.getElementById("dt-value")
+
+    dt.innerText = new Date().toString()
+    setInterval(() => {
+        dt.innerText = new Date().toString()
+    }, 1000)
+
+    document.getElementById("signup-form").addEventListener("submit", e => {
+        let flag = true
+        let emailRegex = /^[A-Za-z0-9+_.-]+@.+\..+$/
+        let pwdRegex = /^[a-zA-Z0-9_@./+\-*\\]{8,}$/
+
+        let email = document.getElementById("email")
+        let pwd = document.getElementById("password")
+        let rePwd = document.getElementById("re-password")
+
+        if (!emailRegex.test(email.value)) {
+            alert("Invalid Email entered")
+            flag = false
+        }
+        if (!pwdRegex.test(pwd.value)) {
+            alert("Make sure the password has atleast 8 characters")
+            flag = false
+        } else {
+            if (pwd.value !== rePwd.value) {
+                alert("PASSWORDS DON'T MATCH!!!")
+                flag = false
+            }
+        }
+
+        if (!flag) {
+            e.preventDefault();
+        }
+    })
+</script>
+
+</html>

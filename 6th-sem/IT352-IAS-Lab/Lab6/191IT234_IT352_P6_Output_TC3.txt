@@ -1,0 +1,10 @@
+ASCII values of plaintext: [102, 105, 114, 101, 119, 97, 108, 108]
+
+ENCRYPTION OPERATION
+Plaintext: firewall
+Ciphertext: uP^IDU
+
+
+DECRYPTION OPERATION
+Ciphertext: uP^IDU
+Plaintext: firewall

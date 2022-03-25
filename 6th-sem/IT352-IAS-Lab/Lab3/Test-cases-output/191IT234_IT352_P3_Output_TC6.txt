@@ -1,0 +1,4 @@
+Analyzed Packet is Not-Intrusion Packet
+Ether / IP / TCP 172.20.104.2:34348 > 172.20.232.2:ldap PA / Raw
+total number of packets checked is = 1
+total number of intrusion packets detected is = 0
