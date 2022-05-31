@@ -9,7 +9,7 @@ My roll number is **191427191IT234**.
 Enjoy 😄
 
 ## Course List
-The courses offered by the IT department and their course plan are present in the file [IT-UG-Curriculum-2019](IT-UG-Curriculum-2019.pdf)]
+The courses offered by the IT department and their course plan are present in the file [IT-UG-Curriculum-2019](IT-UG-Curriculum-2019.pdf)
 
 ### 3rd Semester
 
