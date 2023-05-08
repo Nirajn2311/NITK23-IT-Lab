@@ -1,0 +1,16 @@
+In today's IT414 lab, all students must implement the FP-Tree algorithm on the following datasets with the given specifications :
+Dataset 1- All Electronics:
+
+In the given example dataset I1,I2,I3, etc are the items
+
+Generate all the Frequent Item sets with the minimum support of 2
+
+Generate all the Association Rule with a confidence threshold >=70%, and with frequent 3 item set (Length 3)
+
+Dataset 2- Goods dataset (Consider the First 100 data):
+
+In the given example dataset 30, 31, 32,33 etc are the items
+
+Generate all the Frequent Item sets with the minimum support of 3
+
+Generate all the Association Rule with a confidence threshold >=70%, and with frequent 4 item set (Length 8)
