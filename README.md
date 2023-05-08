@@ -9,6 +9,7 @@ My roll number is **191427191IT234**.
 Enjoy 😄
 
 ## Course List
+
 The courses offered by the IT department and their course plan are present in the file [IT-UG-Curriculum-2019](IT-UG-Curriculum-2019.pdf)
 
 ### 3rd Semester
@@ -47,4 +48,13 @@ The courses offered by the IT department and their course plan are present in th
 
 ### 7th Semester
 
-Coming Soon: July - November 2022
+| Course Code | Course Name                |
+| ----------- | -------------------------- |
+| IT402       | SC - Soft Computing        |
+| IT458       | IR - Information Retrieval |
+
+### 8th Semester
+
+| Course Code | Course Name                             |
+| ----------- | --------------------------------------- |
+| IT414       | DWDM - Data Warehousing and Data Mining |
